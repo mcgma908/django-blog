@@ -1,0 +1,13 @@
+{% extends "blog/header.html" %}
+
+{% block content %}
+	<div class="blogShort">
+		<center><h3 class = "blog_headings">{{ tag_name }}</h3></center<>
+	</div>
+		<br>
+	
+	{% for post in blogs %}
+		{% include "blog/includes/blog_post.html"%}
+	{% endfor %}
+	
+{% endblock %}
