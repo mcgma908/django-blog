@@ -1,0 +1,23 @@
+{% extends "blog/header.html" %}
+
+{% block content %}
+<div class="blogShort">
+
+	<center><h3 class = "blog_headings">Archive</h3></center>
+	<h4 class="sub_h4">Tags</h4>
+		
+	{% for x in all_tags %}
+		<a href="/archive/{{ x|slugify }}">{{ x }} </a>
+	{% endfor %}
+		
+	<br><br>
+	<h4 class="sub_h4">Year</h4>
+		
+	{% for x in all_years %}
+		<a href="/archive/{{ x }}">{{ x }} </a>
+	{% endfor %}
+</div>
+
+
+{% endblock %}
+

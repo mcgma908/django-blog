@@ -1,0 +1,16 @@
+{% block content %}
+	
+	<div class="blogShort">
+		<b><p>{{post.date|date:"F d, Y"}}<p></b>
+		<center><h3 class="blog_headings"><a class="blog_headings" href="/{{ post.date|date:'Y' }}/{{ post.slug }}"> {{post.title}}</a></h3></center>
+		<p>{{ post.body|safe }}</p>
+		&#124;<em>&nbsp;
+			
+		{% for y in post.tag.all %}
+			<a href="/archive/{{ y|slugify }}">{{ y }}</a>&nbsp;&nbsp;&#124;&nbsp;
+		{% endfor %}
+			
+		<a href="/{{ post.date|date:'Y' }}/{{ post.slug }}">{{ post.approved_comments.count }} comments</a></em>
+	</div>
+	<br>
+{% endblock %}

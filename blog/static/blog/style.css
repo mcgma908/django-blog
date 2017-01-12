@@ -1,0 +1,130 @@
+p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+}
+
+h4 {font-family: 'Roboto Condensed', sans-serif}
+h3 {font-family: 'Roboto Condensed', sans-serif}
+
+.sub_h4 {
+	    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+}
+
+ol {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+}
+
+a {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.branding {
+    text-align: center;
+    color: #3399ff;
+    font-family: 'Roboto Condensed', sans-serif;
+	font-size: 49px;
+}
+.blog_headings {
+	color: #3399ff;
+	margin-top: 0cm;
+	text-align: center;
+	font-family: 'Roboto Condensed', sans-serif
+}
+
+
+.comment {
+	margin: 20px 10px 20px 20px;
+	}
+	
+.border_comment {
+	border-bottom: dashed 1px;
+}
+
+.blogShort { 
+	border-bottom:1px solid #000000;
+	border-right:1px solid #000000;
+	background-color: #f8f8ff;
+	border-radius: 15px;
+    -moz-border-radius: 15px;
+    -webkit-border-radius: 15px;
+	padding-left: 0.5cm;
+	padding-right: 0.5cm;
+	padding-top: 0.5cm;
+	padding-bottom: 0.5cm;
+	}
+	
+.add{background: #333; padding: 10%; height: 300px;}
+
+.nav-sidebar { 
+    width: 100%;
+    padding: 8px 0; 
+    border-right: 1px solid #000000;
+		border-bottom:1px solid #000000;
+			background-color: #f8f8ff;
+	    border-radius: 15px;
+    -moz-border-radius: 15px;
+    -webkit-border-radius: 15px;
+}
+.nav-sidebar a {
+    color: #333;
+    -webkit-transition: all 0.08s linear;
+    -moz-transition: all 0.08s linear;
+    -o-transition: all 0.08s linear;
+    transition: all 0.08s linear;
+}
+.nav-sidebar .active a { 
+    cursor: default;
+    background-color: #34ca78; 
+    color: #fff; 
+}
+.nav-sidebar .active a:hover {
+    background-color: #37D980;   
+}
+.nav-sidebar .text-overflow a,
+.nav-sidebar .text-overflow .media-body {
+    white-space: nowrap;
+    overflow: hidden;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis; 
+}
+
+.button {
+    background-color: #f8f8ff;
+    border: 1px solid #000000;
+    color: #3399ff;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+	border-radius: 12px;
+}
+
+.empty_button {
+	 background-color: #f8f8ff;
+    border: 1px solid #000000;
+    color: #3399ff;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+	border-radius: 12px;
+}
+ h2{color:#34ca78;}
+ .margin10{margin-bottom:10px; margin-right:10px;}
+
+#id_comment {
+    width: 800px;
+    height: 200px;
+}
+
+#id_body {
+    width: 800px;
+    height: 200px;
+}

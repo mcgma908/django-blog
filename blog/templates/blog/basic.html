@@ -1,0 +1,10 @@
+{% extends "blog/header.html" %}
+
+{% block content %}
+<div class="blogShort">
+	<center><h3 class = "blog_headings">{{ context.title }}</h3></center><br>
+	<p> {{ context.body|safe }} </p>
+</div>
+
+
+{% endblock %}

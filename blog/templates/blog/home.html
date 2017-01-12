@@ -1,0 +1,31 @@
+{% extends "blog/header.html" %}
+
+{% block content %}
+	{% for post in blogs %}
+		{% include "blog/includes/blog_post.html"%}
+	{% endfor %}
+
+	<!--Does the button for next, previous, and how many pages -->
+	{% if blogs_per_page >= total_blogs %} <!--first page (only one page) -->
+
+	{% elif blogs_per_page < total_blogs and first %} <!--first of many -->
+		<center>
+		<div class="empty_button">1/{{ pages }}</div>
+		<a href="/page/{{ page|add:'1' }}" class="button">></a>
+		</center>
+		
+	{% elif blogs_per_page < total_blogs and not first and not last %} <!--2nd/3rd of many -->
+		<center>
+		<a href="/page/{{ page|add:'-1' }}" class="button"><</a>
+		<div class="empty_button">{{2}}/{{ pages }}</div>
+		<a href="/page/{{ page|add:'1' }}" class="button">></a>
+		</center>
+		
+		{% else %} <!--last of many -->
+		<center>
+		<a href="/page/{{ page|add:'-1' }}" class="button"><</a>
+		<div class="empty_button">{{ pages }}/{{ pages }}</div>
+		</center>
+	{% endif %}
+
+{% endblock %}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>kiwi physics</title>
+	<meta charset="utf-8" />
+	{% load staticfiles %}
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<!-- Fonts  -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="{% static 'blog/style.css' %}" />
+	<style type="text/css">
+		html,
+		body {
+		  height:100%
+		}
+	</style>
+	<link rel="shortcut icon" type="image/x-icon" href="{% static 'blog/img/favicon.ico' %}" />
+</head>
+
+<body class="body" style="background-color:#e3e3e3">
+<!-- Old color #e3e3e3 #f6f6f6-->
+
+<div class="container-fluid" style="min-height:95%; ">
+		<div class="row">
+			 
+				  <br>
+				  <center>
+				  <!-- start logo -->
+					<a class="branding" href="/"><em>&kappa;i&omega;i physics</em></a>
+				<!-- end logo -->
+
+				  </center>
+			
+		</div><hr>
+<div class="container">
+     <div id="blog" class="row"> 
+                
+                  <div class="col-xs-12 col-md-2 paddingTop20">
+            <nav class="nav-sidebar">
+                <ul class="nav">
+                    <li><a href="/">Blog</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/archive">Archive</a></li>
+                    <li><a href="/further-reading">Further Reading</a></li>
+                    <!-- <li class="nav-divider"></li> -->
+            
+                </ul>
+            </nav>
+                      
+        </div>
+		<div class="col-xs-12 col-md-10">
+
+		
+			   {% block content %}
+			   {% endblock %}	
+                 
+               <div class="col-md-12 gap10"></div>
+
+			 </div>
+			 </div>
+</div>
+	
+	<!-- <footer>
+		<div class="container-fluid" style='margin-left:15px'>
+			<p><a href="#" target="blank">Contact</a> | <a href="#" target="blank">LinkedIn</a> | <a href="#" target="blank">Twitter</a> | <a href="#" target="blank">Google+</a></p>
+		</div>
+	</footer>	 -->
+	
+</body>
+
+</html>
+ 

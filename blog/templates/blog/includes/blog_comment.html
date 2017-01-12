@@ -1,0 +1,60 @@
+{% block content %}
+		
+	<div class="blogShort" >
+		
+		<h3 class="blog_headings">Comments</h3>
+       	
+		{% for comment in post.comments.all %}
+			
+			{% if comment.comment_approved == True %}
+				<div class="border_comment">
+				
+					<p> 
+					{% if comment.website %}
+						<strong><a href="{{ comment.website }}">{{ comment.author }}</a></strong>
+					{% else %}
+						<strong>{{ comment.author }}</strong>
+					{% endif %}
+					 
+					~ {{ comment.date|date:"F d, Y. f a" }}</p>
+				
+					<p class="comment">{{ comment.body|safe }}</p>
+				
+				</div><br>
+				
+			{% endif %}
+		
+		{% empty %}
+			
+			<p>No comments here yet :(</p>
+		
+		{% endfor %}
+		
+		<h3 class="blog_headings">Leave a Reply</h3>
+    
+		<form method="POST" class="post-form">{% csrf_token %}
+			<p> Required fields are marked with *. Your email address will never be published.</p>
+			<strong><p>Comment * <p/></strong>
+			
+			
+			<div class="container-fluid">
+				<center>{{ form.body }}</center>
+			</div><br>
+		
+			<table style="width:100%">
+				<th><p>Name * </p>{{ form.author }}</th>
+				<th><p>Email * </p>{{ form.email }}</th>
+				<th><p>Website </p>{{ form.website }}</th>
+			</table>
+			<br>
+		
+		
+			<button type="submit" class="save btn btn-default"><p>Submit Comment</p></button>
+		
+		</form>
+		
+	</div>
+		
+	<br><br><br>
+		
+{% endblock %}
